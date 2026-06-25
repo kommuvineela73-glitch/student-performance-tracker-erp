@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Student ERP{% endblock %}</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f4f6f9;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            height: 100vh;
+            width: 220px;
+            position: fixed;
+            background: #1f2937;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #cbd5e1;
+            padding: 12px 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background: #4e73df;
+            color: white;
+        }
+
+        .main-content {
+            margin-left: 230px;
+            padding: 20px;
+        }
+
+        .navbar-top {
+            background: linear-gradient(90deg, #4e73df, #224abe);
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+        .active-link {
+            background: #4e73df;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <h4 class="text-center text-white">🎓 ERP</h4>
+
+    <a href="{{ url_for('dashboard') }}"
+       class="{% if request.endpoint == 'dashboard' %}active-link{% endif %}">
+        Dashboard
+    </a>
+
+    <a href="{{ url_for('students') }}"
+       class="{% if request.endpoint == 'students' %}active-link{% endif %}">
+        Students
+    </a>
+
+    <a href="{{ url_for('add_student') }}"
+       class="{% if request.endpoint == 'add_student' %}active-link{% endif %}">
+        Add Student
+    </a>
+
+    <a href="{{ url_for('analytics') }}"
+       class="{% if request.endpoint == 'analytics' %}active-link{% endif %}">
+        Analytics
+    </a>
+
+    <a href="{{ url_for('logout') if 'logout' in globals() else '#' }}">
+        Logout
+    </a>
+
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+    <div class="navbar-top mb-3">
+        <h5>Student Performance Tracker</h5>
+    </div>
+
+    {% block content %}{% endblock %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark">
+<div class="container">
+
+<a class="navbar-brand" href="{{ url_for('dashboard') }}">
+<i class="fa fa-graduation-cap"></i> Student ERP Pro
+</a>
+
+<div class="d-flex gap-2">
+<a href="{{ url_for('dashboard') }}" class="btn btn-light btn-sm">
+<i class="fa fa-home"></i> Dashboard
+</a>
+
+<a href="{{ url_for('add_student_page') }}" class="btn btn-success btn-sm">
+<i class="fa fa-plus"></i> Add Student
+</a>
+</div>
+
+</div>
+</nav>
+
+<div class="container mt-4">
+
+<!-- FLASH -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+<div class="alert alert-{{ category }} alert-dismissible fade show">
+    {{ message }}
+    <button class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+{% endfor %}
+{%

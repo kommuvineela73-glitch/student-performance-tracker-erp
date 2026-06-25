@@ -1,0 +1,145 @@
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef2f7;
+}
+
+/* Sidebar */
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:250px;
+    height:100vh;
+    background:#0f172a;
+    color:#fff;
+    overflow:auto;
+    padding-top:20px;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+}
+
+.sidebar h2{
+    text-align:center;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:35px;
+}
+
+.sidebar a{
+    display:block;
+    padding:14px 22px;
+    color:#cbd5e1;
+    text-decoration:none;
+    transition:.3s;
+    font-size:14px;
+    border-left:3px solid transparent;
+}
+
+.sidebar a:hover{
+    background:#1e293b;
+    border-left:3px solid #2563eb;
+    color:#fff;
+    padding-left:30px;
+}
+
+.sidebar i{
+    margin-right:12px;
+}
+
+/* Topbar */
+.topbar{
+    margin-left:250px;
+    height:70px;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.topbar h4{
+    font-weight:700;
+    color:#1e293b;
+}
+
+/* Main */
+.main{
+    margin-left:250px;
+    padding:30px;
+}
+
+/* Cards */
+.card-box{
+    border-radius:18px;
+    padding:22px;
+    color:white;
+    transition:.3s;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.card-box:hover{
+    transform:translateY(-6px);
+}
+
+.card-box i{
+    font-size:40px;
+    float:right;
+    opacity:.25;
+}
+
+.card-box h2{
+    font-size:32px;
+    font-weight:bold;
+}
+
+.card-box h5{
+    margin-top:8px;
+}
+
+/* Card colors */
+.card1{background:linear-gradient(135deg,#2563eb,#1d4ed8);}
+.card2{background:linear-gradient(135deg,#16a34a,#15803d);}
+.card3{background:linear-gradient(135deg,#f59e0b,#d97706);}
+.card4{background:linear-gradient(135deg,#dc2626,#b91c1c);}
+.card5{background:linear-gradient(135deg,#14b8a6,#0f766e);}
+.card6{background:linear-gradient(135deg,#9333ea,#6b21a8);}
+.card7{background:linear-gradient(135deg,#0ea5e9,#0369a1);}
+.card8{background:linear-gradient(135deg,#ef4444,#b91c1c);}
+
+/* Tables */
+.table-card{
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    overflow:hidden;
+}
+
+.table thead{
+    background:#1e293b;
+    color:white;
+}
+
+.table tbody tr:hover{
+    background:#f1f5ff;
+}
+
+/* Footer */
+.footer{
+    margin-top:40px;
+    text-align:center;
+    color:gray;
+}
+
+</style>

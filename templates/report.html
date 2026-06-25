@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Student Report</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container mt-4">
+
+<h3 class="text-center">📄 Student Report</h3>
+
+<div class="card p-3 mb-3">
+
+<p><b>Name:</b> {{ student.name }}</p>
+<p><b>Roll Number:</b> {{ student.roll_number }}</p>
+<p><b>Branch:</b> {{ student.branch }}</p>
+
+</div>
+
+{% if grades and grades|length > 0 %}
+
+<table class="table table-bordered text-center">
+
+<thead>
+<tr>
+<th>Subject</th>
+<th>Marks</th>
+</tr>
+</thead>
+
+<tbody>
+
+{% for g in grades %}
+<tr>
+<td>{{ g.subject }}</td>
+<td>{{ g.marks }}</td>
+</tr>
+{% endfor %}
+
+</tbody>
+</table>
+
+<h5>Total: {{ total }}</h5>
+<h5>Average: {{ average }}</h5>
+
+{% else %}
+
+<div class="alert alert-warning text-center">
+    No marks found for this student
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>

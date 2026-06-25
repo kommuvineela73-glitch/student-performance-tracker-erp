@@ -1,0 +1,39 @@
+<nav style="background:#2c3e50; padding:12px; display:flex; justify-content:space-between; align-items:center; color:white;">
+
+    <!-- LOGO -->
+    <div style="font-size:18px; font-weight:bold;">
+        🎓 Student ERP
+    </div>
+
+    <!-- LINKS -->
+    <div>
+
+        <a href="{{ url_for('dashboard') }}"
+           style="color:white; margin-right:15px; text-decoration:none;">🏠 Dashboard</a>
+
+        <a href="{{ url_for('students') }}"
+           style="color:white; margin-right:15px; text-decoration:none;">👨‍🎓 Students</a>
+
+        <a href="{{ url_for('subjects') }}"
+           style="color:white; margin-right:15px; text-decoration:none;">📚 Subjects</a>
+
+        <a href="{{ url_for('marks') }}"
+           style="color:white; margin-right:15px; text-decoration:none;">📝 Marks</a>
+
+        <a href="{{ url_for('analytics') }}"
+           style="color:white; margin-right:15px; text-decoration:none;">📊 Analytics</a>
+
+        <a href="{{ url_for('reports') }}"
+           style="color:white; margin-right:15px; text-decoration:none;">📄 Reports</a>
+
+        <a href="{{ url_for('settings') }}"
+   style="color:white; margin-right:15px; text-decoration:none;">
+   ⚙ Settings
+</a>
+
+        <a href="{{ url_for('logout') }}"
+           style="color:white; text-decoration:none;">🚪 Logout</a>
+
+    </div>
+
+</nav>
